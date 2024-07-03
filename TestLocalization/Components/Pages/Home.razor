@@ -1,0 +1,21 @@
+﻿@page "/"
+
+@inject IStringLocalizer<Resource> Localizer
+
+
+<PageTitle>@Localizer["Home"].Value</PageTitle>
+
+<h1>@Localizer["HomeTitle"].Value</h1>
+
+@Localizer["HomeText"].Value
+
+@code
+{
+  protected override void OnAfterRender(bool firstRender)
+  {
+    base.OnAfterRender(firstRender);
+    var test = Localizer["HomeTitle"];
+  }
+
+  
+}
